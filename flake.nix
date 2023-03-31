@@ -24,6 +24,10 @@
             version = "6.0.4";
             src = "${elm-spa-repo}/src/cli";
             npmDepsHash = "sha256-yHcbrNkrYc+8iQ5ZZj5SJIYQxmDwq5yoYg67yfuQJBQ=";
+            postInstall = ''
+                        wrapProgram $out/bin/elm-spa \
+                        --prefix PATH : ${pkgs.elmPackages.elm}/bin
+                        '';
           };
       }
     );
