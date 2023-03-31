@@ -1,0 +1,2 @@
+#+title: elm-spa
+This is a nix flake wrapper around [[https://www.elm-spa.dev/][elm-spa]]. You can run nix-run on this flake to invoke elm-spa, or add it as a build dependency.
