@@ -1,2 +1,2 @@
 #+title: elm-spa
-This is a nix flake wrapper around [[https://www.elm-spa.dev/][elm-spa]]. You can run nix-run on this flake to invoke elm-spa, or add it as a build dependency.
+This is a nix flake wrapper around [[https://www.elm-spa.dev/][elm-spa]]. You can run nix-run on this flake to invoke elm-spa, or add it as a build dependency. This flake also provides a derivation =elmSpaGen= which generates the =/elm-spa= directory. This might be necessary when using =elm-spa= as it doesn't have permissions to copy the directory from the nix store. As a work around, run =nix build .#elmSpaGen=, then copy =.elm-spa= directory out of =result= into your project space. Then, =elm-spa= should work as expected!
