@@ -10,7 +10,7 @@
     flake-utils.lib.eachDefaultSystem (
       system:
       let pkgs = nixpkgs.legacyPackages.${system};
-          elm-spa-version = "0.6.4";
+          elm-spa-version = "6.0.4";
           elm-spa-repo = pkgs.fetchFromGitHub {
             owner = "ryannhg";
             repo = "elm-spa";
